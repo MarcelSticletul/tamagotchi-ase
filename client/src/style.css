@@ -1,75 +1,54 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #242424;
-  color: rgba(255, 255, 255, 0.87);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
+/* Stiluri noi pentru Auth */
+.switch-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+.switch-link span {
+    color: #4facfe;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.switch-link span:hover {
+    color: #00f2fe;
+}
+input {
+    /* 1. Mărimea fixă */
+    width: 150px;   /* Le forțăm pe amândouă la 250px */
+    height: 25px;   /* Le forțăm să aibă aceeași înălțime */
+    
+    /* 2. Matematică exactă */
+    box-sizing: border-box; /* Include chenarul și padding-ul în lățimea totală */
+    
+    /* 3. Stilul vizual (cel stabilit anterior) */
+    padding: 5px 10px; /* 5px sus/jos, 10px stânga/dreapta */
+    border: 1px solid #767676;
+    border-radius: 0;
+    background-color: #fff;
+    
+    /* 4. Spațiere */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.hidden {
+    display: none !important;
+}
+/* --- Mini-Jurnalul din interiorul cardului --- */
+.mini-log {
+    margin-top: 15px;
+    background-color: #333;
+    color: #0f0; /* Verde terminal */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    height: 80px; /* Mai micuț */
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #555;
 }
 
-#app {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  width: 300px;
-}
-
-h1 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-#pet-display {
-  font-size: 80px;
-  margin: 20px 0;
-  transition: transform 0.2s;
-}
-
-#pet-display:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.stats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  background: #333;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.stat-box {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
-.actions-container {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-button {
-  background-color: #646cff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #535bf2;
-}
-
-button:active {
-  transform: scale(0.95);
+.mini-log p {
+    margin: 2px 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1px;
 }

@@ -3,33 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tamagotchi ASE</title>
+    <title>Tamagotchi Auth</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <div id="app">
-      <h1>Tamagotchi ASE 🎓</h1>
-      
-      <div id="pet-display">😐</div>
+      <h1>Tamagotchi App 🐾</h1>
 
-      <div class="stats-container">
-        <div class="stat-box">
-          <span>🍔 Foame:</span>
-          <span id="hunger-val">100</span>
+      <div id="auth-container">
+        
+        <div id="login-form">
+          <h3>🔐 Intră în cont</h3>
+          <input type="text" id="login-user" placeholder="Username" />
+          <input type="password" id="login-pass" placeholder="Parolă" />
+          <div class="btn-group">
+              <button id="btn-do-login" class="primary-btn">Log In</button>
+          </div>
+          <p class="switch-link">Nu ai cont? <span id="link-to-signup">Înregistrează-te aici</span></p>
         </div>
-        <div class="stat-box">
-          <span>❤️ Fericire:</span>
-          <span id="happiness-val">100</span>
+
+        <div id="signup-form" class="hidden">
+          <h3>📝 Cont Nou</h3>
+          <input type="text" id="signup-user" placeholder="Alege Username" />
+          <input type="password" id="signup-pass" placeholder="Alege Parolă" />
+          <div class="btn-group">
+            <button id="btn-do-signup" class="secondary-btn">Sign Up</button>
+          </div>
+          <p class="switch-link">Ai deja cont? <span id="link-to-login">Înapoi la Login</span></p>
         </div>
-        <div class="stat-box">
-          <span>⚡ Energie:</span>
-          <span id="energy-val">100</span>
-        </div>
+
       </div>
 
-      <div class="actions-container">
-        <button id="btn-feed">Hrană</button>
-        <button id="btn-play">Joacă</button>
-        <button id="btn-sleep">Somn</button>
+      <div id="dashboard" class="hidden">
+        <h2 id="welcome-msg"></h2>
+        
+        <div class="create-container">
+          <input type="text" id="pet-name-input" placeholder="Nume animal nou" />
+          <button id="btn-create">Creează Animal Nou +</button>
+          <button id="btn-logout" style="background-color: #c0392b; margin-left: 10px;">Logout</button>
+        </div>
+
+        <div id="pets-container"></div>
+
+        
       </div>
     </div>
 
