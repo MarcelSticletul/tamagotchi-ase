@@ -3,7 +3,16 @@
     "id": "4fa1ff73-2cbb-4cc4-b812-cefeca6767cc",
     "owner": "Andrei",
     "name": "Costel",
-    "age": 47.70000000000014,
+    "age": 55.60000000000019,
+    "food": 1,
+    "water": 0,
+    "energy": 6
+  },
+  {
+    "id": "677d569b-4f90-4335-8394-413bc41f2b11",
+    "owner": "abc",
+    "name": "max",
+    "age": 6.699999999999993,
     "food": 0,
     "water": 0,
     "energy": 0
