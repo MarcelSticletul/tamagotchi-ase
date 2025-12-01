@@ -167,10 +167,10 @@ function renderPets(pets) {
         div.innerHTML = `
             <h3>${pet.name} (Age: ${Math.floor(pet.age)})</h3>
             <div class="pet-icon">${petImage}</div>
-            <div class="stats">
-                <p>🍖 Food: ${pet.food.toFixed(1)}/10</p>
-                <p>💧 Water: ${pet.water.toFixed(1)}/10</p>
-                <p>⚡ Energy: ${pet.energy.toFixed(1)}/10</p>
+            <div class="stats-box">
+                ${renderStatBar('🍖 Food', pet.food)}
+                ${renderStatBar('💧 Water', pet.water)}
+                ${renderStatBar('⚡ Energy', pet.energy)}
             </div>
             <div class="actions">
                 <button onclick="window.action('${pet.id}', 'feed')">Feed 🍖</button>
