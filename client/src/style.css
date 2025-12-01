@@ -1,19 +1,19 @@
 /* --- Global Variables and Base Styling --- */
 :root {
-    --color-primary: #3498db; /* Albastru curat */
-    --color-success: #2ecc71; /* Verde */
-    --color-warning: #f39c12; /* Galben */
-    --color-danger: #e74c3c; /* Roșu */
-    --color-bg-dark: #2c3e50; /* Fundal închis */
-    --color-card-bg: #ecf0f1; /* Fundal card deschis */
-    --color-text-dark: #2c3e50;
-    --color-text-light: #ecf0f1;
+    --color-primary: #FF7F50;     /* Coral/Orange pentru butoane principale */
+    --color-success: #4CAF50;     /* Verde pentru barele de progres 10/10 */
+    --color-warning: #FFC300;     /* Galben */
+    --color-danger: #E74C3C;      /* Roșu */
+   --color-bg-dark: #B3CDE0;     /* NOU: Soft Baby Blue (Fundal exterior) */
+    --color-card-bg: #F5F1FA;     /* Fundal Card (Soft Lavender/Alb) */
+    --color-text-dark: #2A1A3A;   /* Textul închis (pentru citire pe fundal deschis) */
+    --color-text-light: #F5F1FA;  /* Text deschis */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--color-bg-dark); 
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     text-align: center;
     padding: 20px;
     margin: 0;
@@ -24,12 +24,16 @@ body {
 }
 
 #auth-container, #dashboard {
-    background-color: #34495e; 
+   /* Revenim la culoarea Dark Blue/Gray preferată */
+    background-color: #415A77; 
+    
+    /* --- FIX CRITIC: Forțăm textul să fie Alb (Light) --- */
+    color: var(--color-text-light);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
     min-width: 350px;
-    max-width: 600px;
+    max-width: 600px; /* Menținem limita de 2 coloane */
     display: inline-block;
 }
 
@@ -43,12 +47,12 @@ body {
     font-size: 14px;
 }
 .switch-link span {
-    color: #4facfe;
+    color: var(--color-primary); /* Coral */
     cursor: pointer;
     text-decoration: underline;
 }
 .switch-link span:hover {
-    color: #00f2fe;
+    color: #ffaa88;
 }
 
 /* USER'S INPUT STYLING (Aplica universal) */
@@ -62,15 +66,17 @@ input {
     background-color: #fff;
     margin-right: 10px;
     margin-bottom: 10px;
+    color: var(--color-text-dark); /* Text închis pe fundal alb */
 }
 
 /* --- Stiluri Adăugate (Pet Cards și Butoane) --- */
 .pet-card {
-    background: var(--color-card-bg);
-    color: var(--color-text-dark);
+    background: var(--color-card-bg); /* Soft Lavender */
+    color: var(--color-text-dark); /* Text închis pe fundal deschis */
     padding: 15px;
-    border-radius: 0;
-    width: 250px;
+    border-radius: 0; 
+    width: 250px; 
+    flex-shrink: 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     margin-bottom: 20px;
     text-align: center;
